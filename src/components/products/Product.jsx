@@ -9,40 +9,29 @@ const Product = ({
     <div
       className={`${
         theme ? "text-white" : "text-black"
-      } flex space-x-5 justify-evenly items-center w-full  bg-blue-500  font-extrabold  text-2xl  p-3 rounded-2xl mb-8 mt-[2em] `}
+      } flex flex-col sm:flex-row justify-between items-center w-full p-4 bg-blue-500 rounded-2xl mb-8 mt-8 font-extrabold text-lg sm:text-2xl `}
     >
-      <h1>Name : {name}</h1>
-      <h1>Price : {price}</h1>
-      <h1>Items : {items} </h1>
-
-      <div className="flex-row space-x-[3em] ">
-        <button
-          className="btn btn-success"
-          onClick={() => {
-            increment(id);
-          }}
-        >
+      <div className="flex flex-col sm:flex-row sm:space-x-8">
+        <p>Name: {name}</p>
+        <p>Price: {price}</p>
+        <p>Items: {items}</p>
+      </div>
+      <div className="flex flex-wrap justify-center sm:justify-end space-x-4 mt-4 sm:mt-0">
+        <button className="btn btn-success" onClick={() => increment(id)}>
           +
         </button>
         <button
           className="btn btn-warning"
-          onClick={() => {
-            items === 1 ? items : decrement(id);
-          }}
+          onClick={() => (items === 1 ? items : decrement(id))}
         >
           -
         </button>
-        <button
-          className="btn btn-error"
-          onClick={() => {
-            deleteElement(id);
-          }}
-        >
+        <button className="btn btn-error" onClick={() => deleteElement(id)}>
           Delete
         </button>
       </div>
 
-      <h1>Total : {price * items} </h1>
+      <p className="mt-4 sm:mt-0">Total: {price * items}</p>
     </div>
   );
 };

@@ -72,9 +72,7 @@ const App = () => {
 
   return (
     <div
-      className={`${
-        theme ? "bg-black " : "bg-white"
-      } h-screen text-center space-y-6`}
+      className={`${theme ? "bg-black " : "bg-white"} min-h-screen  p-4 sm:p-8`}
     >
       <Header
         addedProducts={addedProducts}
