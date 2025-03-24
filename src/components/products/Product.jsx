@@ -9,7 +9,7 @@ const Product = ({
     <div
       className={`${
         theme ? "text-white" : "text-black"
-      } flex flex-col sm:flex-row justify-between items-center w-full p-4 bg-blue-500 rounded-2xl mb-8 mt-8 font-extrabold text-lg sm:text-2xl `}
+      } flex flex-col sm:flex-row justify-evenly items-center w-full p-4 bg-blue-500 rounded-2xl mb-8 mt-8 font-extrabold text-lg sm:text-2xl `}
     >
       <div className="flex flex-col sm:flex-row sm:space-x-8">
         <p>Name: {name}</p>
